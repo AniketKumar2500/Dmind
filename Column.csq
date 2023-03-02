@@ -1,0 +1,17 @@
+main = false
+class column
+    public:
+        data:list<f64> = {}
+        def add(val:f64)
+            data->add(val)
+        add ends
+        def mean()
+            return data->sum()/f64(data->len()->val)
+        mean ends
+        def tostr()
+            return data->tostr()
+        tostr ends
+        def sum()
+            return data->sum()
+        sum ends
+endc
