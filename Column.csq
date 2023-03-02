@@ -14,4 +14,14 @@ class column
         def sum()
             return data->sum()
         sum ends
+        def info()
+            inf:str = data->tostr()
+            inf = inf + str("\nlen :")
+            inf = inf + data->len()->tostr()
+            inf = inf + str("\nsum :")
+            inf = inf + data->sum()->tostr()
+            inf = inf + str("\nmean :")
+            inf = inf + mean()->tostr()
+            return inf
+        info ends
 endc
