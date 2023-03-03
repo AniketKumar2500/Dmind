@@ -1,0 +1,27 @@
+import Column
+use Column::column
+class dframe 
+    public:
+        data:list<column> = {}
+        columns:list<str> = {}
+        init dframe(col:initializer_list<str>,d:initializer_list<list<f64>>)
+            for c:str in col
+                columns->add(c)
+            ends
+            for v:list<f64> in d
+                data->add(column(v))
+            ends
+        dframe ends
+        init dframe(col:initializer_list<str>,d:initializer_list<column>)
+            for c:str in col
+                columns->add(c)
+            ends
+            for v:column in d
+                data->add(v)
+            ends
+        dframe ends
+        def read()
+endc
+#Test
+df:dframe = {"c1","c2"},{{34.44,45,54}, {3,54,4}}
+print(df->data[0])
