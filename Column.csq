@@ -2,6 +2,9 @@ main = false
 class column
     public:
         data:list<f64> = {}
+        init column(data:list<f64>)
+            this->data = data
+        column ends
         def add(val:f64)
             data->add(val)
         add ends
